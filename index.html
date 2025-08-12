@@ -80,14 +80,58 @@
     .nav-links a:hover {
         background-color: #34495e;
     }
+
+    /* New Welcome Section */
+        .welcome-section {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #ffffff;
+        }
+        .welcome-section h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%; /* This makes the image circular */
+            object-fit: cover; /* Prevents the image from stretching */
+            border: 5px solid #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        /* New Passion Section */
+        .passion-section {
+            padding: 40px 20px;
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+        }
+        .passion-section h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        .passion-section p {
+            font-size: 1.1rem;
+            color: #555;
+        }
   </style>
 </head>
 
-<body>
-  <div>
-    <h1>Home Page</h1>
-    <p>This is the home page.</p>
-  </div>
-</body>
+<main>
+        <section class="welcome-section">
+            <h1>Hey, welcome to my website!</h1>
+            <img src="https://media.licdn.com/dms/image/v2/D5635AQE38W3pYllzzw/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1729549970278?e=1755633600&v=beta&t=M6x6YbXdPrwbNCdRSLO11xOaYPfBz8yM8QdApLtb4CY" alt="A photo of me" class="profile-pic">
+        </section>
+
+        <section class="passion-section">
+            <h2>My Passion</h2>
+            <p>I’m a recent graduate of the University of Illinois at Urbana-Champaign, holding a B.S. in Information Science and a minor in Computer Science. I’m passionate about using data to drive insight and innovation, particularly by applying Machine Learning and AI to solve real-world business problems.</p>
+            <p>Through both academic projects and hands-on experience, I’ve worked with large datasets, built SQL databases, deployed websites using GCP, and implemented predictive models with Python. My technical background is complemented by leadership experience in both technical support and e-sports operations, where I’ve led teams, managed training programs, and coordinated events for hundreds of participants.</p>
+            <p>I’m especially interested in opportunities that combine data science, problem-solving, and technology-driven decision-making.</p>
+        </section>
+    </main>
 
 </html>
