@@ -16,26 +16,26 @@
 
   <style>
     body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: #f8f9fa;
-            color: #343a40;
-        }
-        .container {
-            width: 85%;
-            max-width: 960px;
-            margin: auto;
-            overflow: hidden;
-            padding: 0 20px;
-        }
-        header {
-            background: #030303;
-            color: #ffffff;
-            padding: 2rem 0;
-            text-align: center;
-        }
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background: #cfd0d1;
+        color: #0a0f14;
+    }
+    .container {
+        width: 85%;
+        max-width: 960px;
+        margin: auto;
+        overflow: hidden;
+        padding: 0 20px;
+    }
+    header {
+        background: #030303;
+        color: #ffffff;
+        padding: 2rem 0;
+        text-align: center;
+    }
     /* Styles the main navigation container */
     .navbar {
         display: flex;
@@ -111,27 +111,118 @@
         .passion-section h2 {
             font-size: 2rem;
             margin-bottom: 15px;
-            color: #2c3e50;
+            color: #0c131a;
         }
         .passion-section p {
             font-size: 1.1rem;
+            color: #2e2c2c;
+        }
+        /* Projects Section */
+        .projects-section {
+            padding: 40px 20px;
+            background-color: #ffffff;
+        }
+
+        .projects-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #2c3e50;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .project-card {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        }
+
+        .project-card img {
+            width: 100%;
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin: 20px 20px 10px 20px;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            padding: 0 20px;
             color: #555;
+        }
+
+        .project-tags {
+            padding: 10px 20px;
+        }
+
+        .project-tags span {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .project-link {
+            display: block;
+            padding: 20px;
+            text-align: right;
+            font-weight: bold;
+            text-decoration: none;
+            color: #2c3e50;
         }
   </style>
 </head>
 
 <main>
-        <section class="welcome-section">
-            <h1>Hey, welcome to my website!</h1>
-            <img src="https://media.licdn.com/dms/image/v2/D5635AQE38W3pYllzzw/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1729549970278?e=1755633600&v=beta&t=M6x6YbXdPrwbNCdRSLO11xOaYPfBz8yM8QdApLtb4CY" alt="A photo of me" class="profile-pic">
-        </section>
+    <section class="welcome-section">
+        <h1>Hey, welcome to my website!</h1>
+        <img src="https://media.licdn.com/dms/image/v2/D5635AQE38W3pYllzzw/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1729549970278?e=1755633600&v=beta&t=M6x6YbXdPrwbNCdRSLO11xOaYPfBz8yM8QdApLtb4CY" alt="A photo of me" class="profile-pic">
+    </section>
 
-        <section class="passion-section">
-            <h2>My Passion</h2>
-            <p>I’m a recent graduate of the University of Illinois at Urbana-Champaign, holding a B.S. in Information Science and a minor in Computer Science. I’m passionate about using data to drive insight and innovation, particularly by applying Machine Learning and AI to solve real-world business problems.</p>
-            <p>Through both academic projects and hands-on experience, I’ve worked with large datasets, built SQL databases, deployed websites using GCP, and implemented predictive models with Python. My technical background is complemented by leadership experience in both technical support and e-sports operations, where I’ve led teams, managed training programs, and coordinated events for hundreds of participants.</p>
-            <p>I’m especially interested in opportunities that combine data science, problem-solving, and technology-driven decision-making.</p>
-        </section>
-    </main>
+    <section class="passion-section">
+        <h2>My Passion</h2>
+        <p>I’m a recent graduate of the University of Illinois at Urbana-Champaign, holding a B.S. in Information Science and a minor in Computer Science. I’m passionate about using data to drive insight and innovation, particularly by applying Machine Learning and AI to solve real-world business problems.</p>
+        <p>Through both academic projects and hands-on experience, I’ve worked with large datasets, built SQL databases, deployed websites using GCP, and implemented predictive models with Python. My technical background is complemented by leadership experience in both technical support and e-sports operations, where I’ve led teams, managed training programs, and coordinated events for hundreds of participants.</p>
+        <p>I’m especially interested in opportunities that combine data science, problem-solving, and technology-driven decision-making.</p>
+    </section>
 
+    <section id="projects" class="projects-section">
+        <h2>Featured Project</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <img src="TurtlesAllTheWayDown.png" alt="Project 2 Screenshot">
+                <h3>Turtles All The Way Down</h3>
+                <p>An immersive 2D platformer game built with Unreal Engine 5, focusing on performance optimization and level design.</p>
+                <div class="project-tags">
+                    <span>Unreal Engine 5</span>
+                    <span>Game Development</span>
+                    <span>Blueprints</span>
+                    <span>Level Design</span>
+                    <span>C++</span>
+                </div>
+                <a href="#" class="project-link">View Project &rarr;</a>
+            </div>
+        </div>
+    </section>
+</main>
 </html>
